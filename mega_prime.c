@@ -1,0 +1,51 @@
+#include<stdio.h>
+int mega(int n);
+int main()
+{
+    int n,c=0,rem,count=0;
+    scanf("%d",&n);
+     if(mega(n))
+     {
+         while(n!=0)
+         {
+             rem=n%10;
+             count++;
+             if(mega(rem))
+             {
+                 c++;
+             }
+             n=n/10;
+         }
+         if(count==c)
+         {
+             printf("Mega Prime");
+         }
+         else
+         {
+             printf("Not Mega Prime");
+         }
+     }
+     else
+         {
+             printf("Not Mega Prime");
+         }
+}
+int mega(int n)
+{
+    int i,c=0;
+    for(i=1; i<=n; i++)
+    {
+        if(n%i==0)
+        {
+            c++;
+        }
+    }
+    if(c==2)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
