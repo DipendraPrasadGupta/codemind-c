@@ -5,17 +5,16 @@ int main()
     scanf("%d",&n);
     for(int i=1; i<=n; i++)
     {
-        for(int j=1; j<=n-i; j++)
+        for(int j=1; j<=n; j++)
         {
-            printf(" ");
-        }
-        for(int k=i-1; k>=1; k--)
-        {
-            printf("%d",k);
-        }
-        for(int l=0; l<=i-1; l++)
-        {
-            printf("%d",l);
+     if(j==n || j==i || j==1)
+     {
+         printf("* ");
+     }
+     else
+     {
+         printf("  ");
+     }
         }
         printf("
 ");
