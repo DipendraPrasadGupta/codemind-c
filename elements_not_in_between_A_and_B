@@ -1,0 +1,30 @@
+# include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int p,q,c=0, f=1;
+    scanf("%d%d",&p,&q);
+    for(int i=0; i<n; i++)
+    {
+        if(a[i]>=p && a[i]<=q)
+        {
+            c++;
+          
+        }
+        else 
+        {
+            printf("%d ",a[i]);
+            f=0;
+        }
+    }
+    if(f==1)
+    {
+        printf("-1");
+    }
+}
